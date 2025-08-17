@@ -1,0 +1,106 @@
+body{
+  background-color: #0E0E0E;
+  padding: 25;
+}
+
+.Logo{
+  width: 150px;
+  height: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.Logo {
+    width: 150px;
+    height: auto;
+}
+
+.nav-container {
+    background-color: rgba(83, 80, 80, 0.9);
+    border-radius: 50px;
+    padding: 5px 5px;
+    display: inline-block;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column; /* apila verticalmente */
+  align-items: center;    /* centra horizontal */
+  gap: 15px;    /* centra horizontalmente */
+}
+
+.border{
+  background-color: rgba(83, 80, 80, 0.9);
+  border-radius: 50px;
+  padding: 1px 5px;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.Status{
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: x-small;
+}
+
+.status-dot{
+  width: 10px;
+  height: 10px;
+  background-color: #33ff00;
+  border-radius: 100px;
+  margin-right: 5px;
+}
+
+.photo img {
+  width: 170px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.aboutme-text{
+  color: white;
+  text-align: center;
+}
+
+.aboutme-text h1{
+  color: #33ff00;
+}
+
+.aboutme-description{
+  color: white;
+  text-align: center;
+  line-height: 26px;
+}
+
+.aboutme-description h4 {
+  margin-top: 5px;
+}
+
+.cta{
+  color: #33ff00;
+}
