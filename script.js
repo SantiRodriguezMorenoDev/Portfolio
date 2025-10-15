@@ -39,28 +39,41 @@ window.addEventListener('scroll', () => {
 // ===================================
 const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', function(e) {
+contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
     
-    // Get form data
+    const submitBtn = this.querySelector('.submit-btn');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Enviando...';
+    submitBtn.disabled = true;
+    
     const formData = {
-        name: document.getElementById('name').value,
+        nombre: document.getElementById('name').value,
         email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        message: document.getElementById('message').value
+        telefono: document.getElementById('phone').value,
+        mensaje: document.getElementById('message').value
     };
 
-    // Log form data to console (for development)
-    console.log('Form submitted:', formData);
+    try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbypS8LBLkcCbAJlkKtFJhzylseUj0PZp1H8jzGSiN8U9SXsjPoj_kY1ftLEE8amCe12AQ/exec', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
 
-    // Show success message
-    showNotification('¡Gracias por tu mensaje! Te contactaré pronto.');
-
-    // Reset form
-    this.reset();
-
-    // Here you can add your backend logic or email service integration
-    // For example: sendEmail(formData) or fetch('/api/contact', {...})
+        showNotification('¡Gracias por tu mensaje! Te contactaré pronto. 🚀');
+        this.reset();
+        
+    } catch (error) {
+        showNotification('❌ Error al enviar. Intenta de nuevo.');
+        console.error('Error:', error);
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
 });
 
 // ===================================
