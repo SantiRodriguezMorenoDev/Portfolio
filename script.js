@@ -64,11 +64,11 @@ contactForm.addEventListener('submit', async function(e) {
             body: JSON.stringify(formData)
         });
 
-        showNotification('¡Gracias por tu mensaje! Te contactaré pronto. 🚀');
+        showNotification('¡Gracias por tu mensaje! Te contactaré pronto.');
         this.reset();
         
     } catch (error) {
-        showNotification('❌ Error al enviar. Intenta de nuevo.');
+        showNotification('Error al enviar. Intenta de nuevo.');
         console.error('Error:', error);
     } finally {
         submitBtn.textContent = originalText;
