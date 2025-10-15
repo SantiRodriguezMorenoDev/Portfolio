@@ -203,3 +203,57 @@ window.addEventListener('load', () => {
         document.body.style.opacity = '1';
     }, 100);
 });
+
+// ===================================
+// Project Image Modal
+// ===================================
+const modal = document.createElement('div');
+modal.id = 'imageModal';
+modal.style.cssText = `
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+`;
+
+const modalImage = document.createElement('img');
+modalImage.style.cssText = `
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+`;
+
+const closeModal = document.createElement('span');
+closeModal.textContent = '×';
+closeModal.style.cssText = `
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+`;
+
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+modal.appendChild(modalImage);
+modal.appendChild(closeModal);
+document.body.appendChild(modal);
+
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', function() {
+        const img = this.querySelector('img');
+        if (img) {
+            modalImage.src = img.src;
+            modal.style.display = 'flex';
+        }
+    });
+});

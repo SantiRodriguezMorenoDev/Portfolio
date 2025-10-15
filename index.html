@@ -126,7 +126,7 @@
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-image">
-                    📧
+                    <img src="assets/plantilla cobro.png" alt="Plantilla de cobro con HTML & CSS">
                 </div>
                 <div class="project-content">
                     <div class="project-title">
@@ -145,7 +145,31 @@
                 </div>
             </div>
 
+             <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/script envio correo.png" alt="Script para enviar correos usando SMTP con C#">
+                </div>
+                <div class="project-content">
+                    <div class="project-title">
+                        <span>Script para enviar emails</span>
+                        <span style="font-size: 1.2rem;">↗</span>
+                    </div>
+                    <p class="project-description">
+                        Sistema de envio de plantillas HTML/CSS masivo por correo electronico. 
+                        Con cumplimiento de reglas y tecnologias para permitir la correcta visulaizacion en el correo.
+                        Se usó C#, SMTP y RabbitMQ para el manejo de colas
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">SMTP</span>
+                        <span class="tech-tag">RabbitMQ</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Puedes agregar más proyectos aquí duplicando este bloque -->
+        </div>
         </div>
     </section>
 
@@ -190,6 +214,12 @@
     <footer>
         <p>&copy; 2025 Santiago Rodríguez Moreno. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Modal for Project Images -->
+    <div id="imageModal" style="display: none;">
+        <img src="" alt="Imagen del proyecto">
+        <span style="position: absolute; top: 20px; right: 30px; font-size: 2rem; color: white; cursor: pointer;">&times;</span>
+    </div>
 
     <script src="script.js"></script>
 </body>
