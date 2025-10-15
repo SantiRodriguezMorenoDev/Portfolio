@@ -1,50 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santiago Rodriguez M. Dev</title>
+    <meta name="description" content="Portafolio de Santiago Rodríguez Moreno - Tecnólogo en Desarrollo de Software">
+    <title>Santiago Rodríguez M - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="Images/Claro sin fondo favicon.png" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <img src="Images/Claro sin fondo.png" alt="" class="Logo">
-        <div class="nav-container">
-            <nav>
-                <ul>
-                    <li><a href="">About me</a></li>
-                    <li><a href="">Skills</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Contact me</a></li>
-                </ul>
-            </nav>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">SR</div>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
         </div>
-    </header>
-    <div class="profile">
-        <div class="border">
-            <div class="Status">
-                <span class="status-dot"></span>
-                <p>Available for work</p>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>
+                    Desarrollo código y <span class="highlight">creo soluciones digitales</span>
+                </h1>
+                <p>
+                    Tecnólogo en Desarrollo de Software especializado en Frontend y Backend. 
+                    Experiencia sólida con HTML, CSS, JavaScript, C#, .NET Core y Python.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Contáctame</a>
+                    <a href="#projects" class="btn btn-secondary">Ver Proyectos</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="avatar-container">
+                    <img src="assets/avatar.png" alt="Santiago Rodríguez" id="avatarImg">
+                </div>
             </div>
         </div>
-        <div class="photo">
-            <img src="Images/verde.png" alt="">
-        </div>
+    </section>
 
-        <div class="aboutme-text">
-            <h2>I make beautiful</h2>
-            <h1>and responsive websites!</h1>
+    <!-- Tech Stack -->
+    <section class="tech-stack">
+        <h3>Experiencia Con</h3>
+        <div class="tech-icons">
+            <div class="tech-icon" title="HTML5">📄</div>
+            <div class="tech-icon" title="CSS3">🎨</div>
+            <div class="tech-icon" title="JavaScript">⚡</div>
+            <div class="tech-icon" title="C#">💻</div>
+            <div class="tech-icon" title="Python">🐍</div>
+            <div class="tech-icon" title="SQL">🗄️</div>
         </div>
-        <div class="aboutme-description">
-            <span>I’m a Front-End Developer specialized in HTML, CSS, Tailwind CSS, and JavaScript.<br>
-                I create clean, responsive, and modern websites that help businesses stand out online.<br>
-                If you’re looking for a developer who combines professional design with functionality,
-            </span>
-            <h4 class = "cta">I’d be glad to help bring your project to life.</h4>
-        </div>
-    </div>
+    </section>
 
-    
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <h2 class="section-title">EXPERIENCIA</h2>
+        <div class="experience-container">
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Practicante Desarrollo de Software</h3>
+                        <div class="company">El Tiempo Casa Editorial</div>
+                    </div>
+                    <div class="date">2024 - 2025</div>
+                </div>
+                <div class="experience-description">
+                    Desarrollo de scripts para envío masivo de correos y creación de plantillas de cobro en HTML/CSS. 
+                    Mejora significativa en habilidades Frontend y Backend. Gestión de bases de datos y uso de Git para control de versiones.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Agente Bilingüe</h3>
+                        <div class="company">Teleperformance Colombia</div>
+                    </div>
+                    <div class="date">2023 - 2024</div>
+                </div>
+                <div class="experience-description">
+                    Atención al cliente en inglés. Resolución de problemas técnicos relacionados con iOS. 
+                    Desarrollo de habilidades de comunicación y resolución de conflictos.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Agente Call Center Bilingüe</h3>
+                        <div class="company">Teleperformance Colombia</div>
+                    </div>
+                    <div class="date">2022</div>
+                </div>
+                <div class="experience-description">
+                    Servicio y atención al cliente. Resolución de problemas técnicos básicos y manejo de Salesforce.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">PROYECTOS</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    📧
+                </div>
+                <div class="project-content">
+                    <div class="project-title">
+                        <span>Plantilla de Cobro por Email</span>
+                        <span style="font-size: 1.2rem;">↗</span>
+                    </div>
+                    <p class="project-description">
+                        Sistema de plantillas HTML/CSS para envío masivo de correos de cobro. 
+                        Diseño responsive y profesional para mejora en comunicación con clientes.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">Email Template</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Puedes agregar más proyectos aquí duplicando este bloque -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p>
+                    Tecnólogo en Desarrollo de Software con más de un año de experiencia práctica. 
+                    Actualmente cursando Ingeniería de Software. ¿Tienes un proyecto en mente?
+                </p>
+                <a href="mailto:santi.rodriguezmoreno@gmail.com" class="email-link">
+                    📧 santi.rodriguezmoreno@gmail.com
+                </a>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Santiago Rodríguez Moreno. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
