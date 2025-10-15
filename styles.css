@@ -253,11 +253,13 @@ nav a:hover {
     border-radius: 12px;
     margin-bottom: 2rem;
     border-left: 4px solid var(--accent-pink);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .experience-item:hover {
-    transform: translateX(10px);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 0, 110, 0.2);
+    border-color: var(--accent-pink);
 }
 
 .experience-header {
